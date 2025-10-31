@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>node html serve</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      li{
+        color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Profile page from EJS</h1>
+    <h1>welcome to profile which user id is <i><%= id %></i> and name is <i><%= data.name %></i></h1>
+
+    <h4>HOBBIES</h4>
+    <ul>
+        <% data.hobbies.forEach((item) => {%>
+           <li><%= item %></li> 
+        <%})%>   
+    </ul>
+  </body>
+</html>
